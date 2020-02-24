@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Manipulasi</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="assets/css/docs.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body onload="haha()">
+    <div id="wrapper">
+         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Panel admin</a> 
+            </div>
+  <div style="color: white;
+padding: 15px 50px 5px 0px;
+float: right;
+font-size: 16px;"> 
+
+<script type="text/javascript">
+    function haha(){
+        var hari=new Array(7);
+        hari[1]="SENIN";
+        hari[2]="SELASA";
+        hari[3]="RABU";
+        hari[4]="KAMIS";
+        hari[5]="JUM'AT";
+        hari[6]="SABTU";
+        hari[0]="MINGGU";
+var bulan=new Array(12);
+bulan[1]="January";
+bulan[2]="February";
+bulan[3]="Maret";
+bulan[4]="April";
+bulan[5]="Mei";
+bulan[6]="Juni";
+bulan[7]="July";
+bulan[8]="Agustus";
+bulan[9]="September";
+bulan[10]="Oktober";
+bulan[11]="November";
+bulan[12]="Desember";
+var tgblth=new Date();
+var Tanggal=tgblth.getDate();
+var jam=tgblth.getHours();
+var menit=tgblth.getMinutes();
+var Tahun=tgblth.getFullYear();
+var nmBulan=bulan[tgblth.getMonth()+1];
+var nmHari=hari[tgblth.getDay()];
+TEKS=nmHari+", "+" "+jam+":"+menit+",Tanggal :"+Tanggal+" "+nmBulan+" "+Tahun;
+document.getElementById("log").innerHTML=TEKS;
+    }
+</script>
+ <a href="login.html" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation" style="border-right: 2px solid #c90000">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                <li class="text-center">
+                    <img src="assets/img/find_user.jpg" width="200px" height="175px" class="img-circle"/>
+                    </li>
+                
+                    
+                    <li>
+                        <a  href="index.html"><i class="fa fa-dashboard fa-2x"></i> Dashboard</a>
+                    </li>
+                     <li>
+                        <a  href="konversi.html"><i class="fa fa-dollar fa-2x"></i> Konversi</a>
+                    </li>
+                    <li>
+                        <a  href="operator.html"><i class="glyphicon glyphicon-remove-sign fa-2x"></i> Operator</a>
+                    </li>
+                           <li  >
+                        <a   class="active-menu" href="manipu.html"><i class="fa fa-code fa-2x"></i> Manipulasi Kata</a>
+                    </li>   
+                      <li  >
+                        <a  href="table.html"><i class="fa fa-table fa-2x"></i> Tabel Data</a>
+                    </li>
+                    <li>
+                        <a  href="form.html"><i class="fa fa-edit fa-2x"></i> Biodata </a>
+                    </li>               
+                    
+                                       
+                    
+                </ul>
+               
+            </div>
+            
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h2>Manipulasi Dashboard</h2>   
+                        <h5>Selamat Datang Wafik , Terakhir login <i id="log"></i></h5>
+                    </div>
+                </div>    <!-- /. ROW  -->
+                 <!-- /. ROW  -->
+                 <hr />
+
+                 <div class="row">
+                    
+                     <div class="col-md-6">
+                            <div class="panel panel-default">
+                        <div class="panel-heading">
+                         Cek Polindrom 
+                        </div>        
+                                      <script type="text/javascript">
+                               function polin(){
+                                     x=poli.val2.value;
+                                   p=eval(x.length)-1;
+                                  var hsl="";
+                                   for(var i=p;i>=0;i--){
+                                    hsl=hsl+x.charAt(i);
+                                   }
+                                   if(hsl==x){
+                                        document.getElementById("hslPoli").innerHTML="Polindrom";  
+                                   }else{
+                                    document.getElementById("hslPoli").innerHTML="Bukan Polindrom";  
+                                   }
+                                   document.getElementById("hslKata").innerHTML="Hasilnya : "+hsl+" ";  
+                               }
+                           </script>
+                                    <div class="panel-body"> 
+                                    <form name="poli">
+                                        <div class="form-group">
+                                            <label>Masukan String Yang akan di balik</label>
+                                            <input  class="form-control" name="val2" placeholder="Balik Kata" />
+                                        </div>
+                                     <input type="button"  onclick="polin()" class="btn btn-success btn" value="Balik Kata"><br><br>
+                                        <div id="hslKata" class="alert alert-info">
+                                                   Hasilnya :
+                                        </div>
+                                        <div id="hslPoli" class="alert alert-danger">
+                                                  Cek Polindrom/Tidak
+                                        </div>
+                                        
+                                        </form>
+                                    </div>
+                    </div>
+                        </div><div class="col-md-6">
+                            <div class="panel panel-default">
+                        <div class="panel-heading">
+                         Hitun Nilai Mata Kuliah
+                        </div>        
+                                      <script type="text/javascript">
+                               function dapat(){
+                                tot=0;
+                                hrf="";
+                                tgs1=bali.val2.value;
+                                tgs2=bali.tgs2.value;
+                                uts=bali.uts.value;
+                                tgs3=bali.tgs3.value;
+                                tgs4=bali.tgs4.value;
+                                uas=bali.uas.value;
+                                tot=(tgs1*10/100)+(tgs2*10/100)+(uts*25/100)+(tgs3*10/100)+(tgs4*20/100)+(uas*25/100);
+                                    if(tot>=80)
+                                        hrf="A";
+                                    else if(tot>=60)
+                                        hrf="B";
+                                    else if(tot>=40)
+                                        hrf="C";
+                                    else if(tot>=20)
+                                        hrf="D";
+                                    else 
+                                        hrf="E";
+                                   document.getElementById("hslTot").innerHTML="Total Nilai : "+tot;  
+                                   document.getElementById("hslHuruf").innerHTML="Nilai Huruf : "+hrf;  
+                               }
+                           </script>
+                                    <div class="panel-body"> 
+                                    <form name="bali">
+                                        <div class="form-group">
+                                            <label>Masukan Nilai Makul</label>
+                                            <input  class="form-control" name="val2" placeholder="Tugas1" />
+                                            <input  class="form-control" name="tgs2" placeholder="Tugas2" />
+                                            <input  class="form-control" name="uts" placeholder="Uts" />
+                                            <input  class="form-control" name="tgs3" placeholder="tgs3" />
+                                            <input  class="form-control" name="tgs4" placeholder="tgs4" />
+                                            <input  class="form-control" name="uas" placeholder="uas" />
+                                        </div>
+                                     <input type="button"  onclick="dapat()" class="btn btn-success btn" value="Hitun Nilai"><br><br>
+                                        <div id="hslTot" class="alert alert-info">
+                                                   Total Nilai :
+                                        </div>
+                                        <div id="hslHuruf" class="alert alert-danger">
+                                                  Nilai Huruf :
+                                        </div>
+                                        
+                                        </form>
+                                    </div>
+                    </div>
+                        </div>
+                          </div>
+
+
+
+
+
+           </div>
+
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    
+   
+</body>
+</html>

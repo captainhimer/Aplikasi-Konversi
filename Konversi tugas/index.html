@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- MORRIS CHART STYLES-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   <style type="text/css">
+       .noti-box:hover{
+        cursor: pointer;
+       }
+   </style>
+</head>
+<body onload="haha()">
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Panel admin</a> 
+            </div>
+  <div style="color: white;
+padding: 15px 50px 5px 0px;
+float: right;
+font-size: 16px;"> 
+
+<script type="text/javascript">
+    function haha(){
+        var hari=new Array(7);
+        hari[1]="SENIN";
+        hari[2]="SELASA";
+        hari[3]="RABU";
+        hari[4]="KAMIS";
+        hari[5]="JUM'AT";
+        hari[6]="SABTU";
+        hari[0]="MINGGU";
+var bulan=new Array(12);
+bulan[1]="January";
+bulan[2]="February";
+bulan[3]="Maret";
+bulan[4]="April";
+bulan[5]="Mei";
+bulan[6]="Juni";
+bulan[7]="July";
+bulan[8]="Agustus";
+bulan[9]="September";
+bulan[10]="Oktober";
+bulan[11]="November";
+bulan[12]="Desember";
+var tgblth=new Date();
+var Tanggal=tgblth.getDate();
+var jam=tgblth.getHours();
+var menit=tgblth.getMinutes();
+var Tahun=tgblth.getFullYear();
+var nmBulan=bulan[tgblth.getMonth()+1];
+var nmHari=hari[tgblth.getDay()];
+TEKS=nmHari+", "+" "+jam+":"+menit+",Tanggal :"+Tanggal+" "+nmBulan+" "+Tahun;
+document.getElementById("log").innerHTML=TEKS;
+    }
+</script>
+ <a href="login.html" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+        </nav>   
+           <!-- /. NAV TOP  -->
+                <nav class="navbar-default navbar-side" role="navigation" style="border-right: 2px solid #c90000">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+				<li class="text-center">
+                    <img src="assets/img/find_user.jpg" width="200px" height="175px" class="img-circle"/>
+					</li>
+				
+					
+                    <li>
+                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-2x"></i> Dashboard</a>
+                    </li>
+                     <li>
+                        <a  href="konversi.html"><i class="fa fa-dollar fa-2x"></i> Konversi</a>
+                    </li>
+                    <li>
+                        <a  href="operator.html"><i class="glyphicon glyphicon-remove-sign fa-2x"></i> Operator</a>
+                    </li>
+						   <li  >
+                        <a   href="manipu.html"><i class="fa fa-code fa-2x"></i> Manipulasi Kata</a>
+                    </li>	
+                      <li  >
+                        <a  href="table.html"><i class="fa fa-table fa-2x"></i> Tabel Data</a>
+                    </li>
+                    <li>
+                        <a  href="form.html"><i class="fa fa-edit fa-2x"></i> Biodata </a>
+                    </li>				
+					
+					                   
+                    
+                </ul>
+               
+            </div>
+            
+        </nav>  
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                     <h2>Admin Dashboard</h2>   
+                        <h5>Selamat Datang Wafik , Terakhir login <i id="log"></i></h5>
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+                <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6">           
+            <div class="panel panel-back noti-box" onclick="kon()">
+            <script type="text/javascript">
+                function kon(){
+                    window.location="konversi.html"
+                }
+            </script>
+                <span class="icon-box bg-color-red set-icon">
+                    <i class="fa fa-dollar"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">Konversi</p>
+                    <p class="text-muted">Mengubah Angka</p>
+                </div>
+             </div>
+             </div>
+                    <div class="col-md-4 col-sm-6 col-xs-6"> 
+                    <script type="text/javascript">
+                function opera(){
+                    window.location="operator.html"
+                }
+            </script>          
+            <div class="panel panel-back noti-box" onclick="opera()">
+
+                <span class="icon-box bg-color-green set-icon">
+                    <i class="glyphicon glyphicon-remove-sign"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">Operator</p>
+                    <p class="text-muted">Mengenal Operator </p>
+                </div>
+             </div>
+             </div>
+                    <div class="col-md-4 col-sm-6 col-xs-6"> 
+                     <script type="text/javascript">
+                function manipu(){
+                    window.location="manipu.html"
+                }
+            </script>              
+            <div class="panel panel-back noti-box" onclick="manipu()">
+                <span class="icon-box bg-color-blue set-icon">
+                    <i class="fa fa-code"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">Manipulasi</p>
+                    <p class="text-muted">Memanipulasi String</p>
+                </div>
+             </div>
+             </div>
+             </div>
+             <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-6">     
+                                 <script type="text/javascript">
+                function tabel(){
+                    window.location="table.html"
+                }
+            </script>          
+            <div class="panel panel-back noti-box" onclick="tabel()">
+                <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-table"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">Tabel Data</p>
+                    <p class="text-muted">Mengenal Tabel</p>
+                </div>
+             </div>
+             </div> 
+             <div id="gridSystemModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" style="display: none; padding-right: 17px;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h4 class="modal-title" id="gridModalLabel">Tinggalkan Pesan</h4>
+        </div>
+        <form role="form" name="mesage">
+        <div class="modal-body">
+        
+          <div class="container-fluid">
+                             <div class="form-group">
+                    <label>Email :</label>
+                    <input name="email" placeholder="E-mail" required class="form-control" />
+                     <label>Pesan :</label>
+                     <textarea name="pesan" required placeholder="Masukan Pesan anda di sini" required class="form-control"></textarea> 
+                </div>           
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="buttons" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+             <div class="col-md-4 col-sm-6 col-xs-6">           
+            <div class="panel panel-back noti-box" data-toggle="modal" data-target="#gridSystemModal">
+                <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-envelope"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">Pesan</p>
+                    <p class="text-muted">Meninggalkan pesan</p>
+                </div>
+             </div>
+             </div>
+              <div class="col-md-4 col-sm-6 col-xs-6">
+                 <script type="text/javascript">
+                function bio(){
+                    window.location="form.html"
+                }
+            </script>    
+
+            <div class="panel panel-back noti-box" onclick="bio()">
+                <span class="icon-box bg-color-brown set-icon">
+                    <i class="fa fa-edit"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">Biodata</p>
+                    <p class="text-muted">Mengisi Biodata</p>
+                </div>
+             </div>
+             </div>
+            </div>
+                 <!-- /. ROW  -->
+                <hr />                
+                                 <!-- /. ROW  -->           
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- MORRIS CHART SCRIPTS -->
+     <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    
+   
+</body>
+</html>
